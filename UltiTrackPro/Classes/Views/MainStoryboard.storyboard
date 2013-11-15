@@ -596,12 +596,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nb5-Pc-e4m">
                                         <rect key="frame" x="206" y="123" width="94" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <accessibility key="accessibilityConfiguration" hint="Select Band" label="Band Selection Button"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Bands"/>
                                         <connections>
                                             <action selector="chooseBands:" destination="aY1-2g-yE9" eventType="touchUpInside" id="6Rq-za-My4"/>
                                         </connections>

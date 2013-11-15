@@ -111,9 +111,9 @@
     self.stopButton.alpha = 0.0;
 
     //Bands Button image
-    UIImage *bandsImage = [UIImage imageNamed:@"metal"];
-    [self.bandsButton setBackgroundImage:bandsImage forState:UIControlStateNormal];
-    [self.bandsButton setBackgroundImage:[UIImage imageNamed:@"metal_pressed"] forState:UIControlStateHighlighted];
+    //UIImage *bandsImage = [UIImage imageNamed:@"metal"];
+    //[self.bandsButton setBackgroundImage:bandsImage forState:UIControlStateNormal];
+    //[self.bandsButton setBackgroundImage:[UIImage imageNamed:@"metal_pressed"] forState:UIControlStateHighlighted];
 
     //Create the adView and ad setup
     _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
@@ -204,7 +204,7 @@
     _bannerView = nil;
     [self setAdBannerView:nil];
     [self setTimeNotesTextView:nil];
-    [self setBandsButton:nil];
+    //[self setBandsButton:nil];
     [self setBandsArray:nil];
     [self setActionSheet:nil];
     [self setRepStepper:nil];
@@ -792,10 +792,16 @@
     if (self.bandForStat.weight != 0)
     {
         self.weightTextField.text = [NSString stringWithFormat:@"%d", self.bandForStat.weight];
+        self.bandsButton.backgroundColor = [self colorForBandColorID:self.bandForStat.colorID];
+        
+        [self.bandsButton setTitleColor:((self.bandForStat.colorID == 5 || self.bandForStat.colorID == 6) ? [UIColor lightTextColor] : [UIColor darkTextColor]) forState:UIControlStateNormal];
     }
+    
     else
     {
         self.weightTextField.text = @"0";
+        self.bandsButton.backgroundColor = [UIColor lightGrayColor];
+        [self.bandsButton setTitleColor:[UIColor darkTextColor] forState:UIControlStateNormal];
     }
 }
 
