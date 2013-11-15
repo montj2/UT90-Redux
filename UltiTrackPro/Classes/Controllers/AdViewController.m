@@ -19,18 +19,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    GADRequest *request = [GADRequest request];
-    request.testing = YES;
+    
+    //Set up the ads
     self.fullPageAd = [[GADInterstitial alloc] init];
     self.fullPageAd.delegate = self;
     self.fullPageAd.adUnitID = @"ca-app-pub-2915168992422718/6430614988";
-    //[self.fullPageAd loadRequest:request];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
+    
+    //Create the background view and adjust the alpha for readability
+    UIView *backgroundView = [[UIView alloc] initWithFrame:self.view.frame];
+    [backgroundView setContentMode:UIViewContentModeScaleAspectFill];
+    [backgroundView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
+    backgroundView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
+    backgroundView.alpha = 0.5;
+    [self.view insertSubview:backgroundView atIndex:0];
+
+    //Set the completion label text described in ExerciseDetailViewController
+    self.completionLabel.text = self.completionMessage;
+
 
  
 }
-
+- (IBAction)viewAdButton:(UIButton *)sender {
+    
+    GADRequest *request = [GADRequest request];
+    request.testing = YES;
+    [self.fullPageAd loadRequest:request];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -44,8 +58,6 @@
 // controllers.
 - (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
     [self.fullPageAd presentFromRootViewController:self];
-    NSLog(@"presented ad");
-
 }
 
 // Sent when an interstitial ad request completed without an interstitial to
@@ -58,4 +70,7 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+- (IBAction)noViewAdButton:(UIButton *)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end

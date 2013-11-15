@@ -12,6 +12,11 @@
 
 @interface AdViewController : UIViewController <GADInterstitialDelegate>
 
-@property (nonatomic, strong) GADInterstitial *fullPageAd; 
+@property (nonatomic, strong) GADInterstitial *fullPageAd;
+@property (nonatomic, strong) NSString *completionMessage;
+@property (nonatomic, weak) IBOutlet UILabel *completionLabel;
+
+- (IBAction)viewAdButton:(UIButton *)sender;
+- (IBAction)noViewAdButton:(UIButton *)sender;
 
 @end

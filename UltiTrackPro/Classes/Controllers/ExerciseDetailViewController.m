@@ -628,6 +628,8 @@
     //testing fullpage ad
     //[self.navigationController popViewControllerAnimated:YES];
     AdViewController * adView = [self.storyboard instantiateViewControllerWithIdentifier:@"fullPageAd"];
+    adView.completionMessage = [NSString stringWithFormat:@"Day %d: %@ Completed!", self.day.dayNumber, self.day.dayName];
+    
     [self.navigationController pushViewController:adView animated:YES];
     
     

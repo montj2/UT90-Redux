@@ -134,21 +134,15 @@
     {
         subtextLabel.text = @"Active";
         label.font = [UIFont boldSystemFontOfSize:label.font.pointSize];
-        subtextLabel.font = [UIFont boldSystemFontOfSize:subtextLabel.font.pointSize];
         completedLabel.font = [UIFont boldSystemFontOfSize:completedLabel.font.pointSize];
 
-        UIImageView *imgView = (UIImageView *)[cell viewWithTag:123];
-        imgView.hidden = NO;
     }
     else
     {
         subtextLabel.text = @"";
         label.font = [UIFont systemFontOfSize:label.font.pointSize];
-        subtextLabel.font = [UIFont systemFontOfSize:subtextLabel.font.pointSize];
         completedLabel.font = [UIFont systemFontOfSize:completedLabel.font.pointSize];
 
-        UIImageView *imgView = (UIImageView *)[cell viewWithTag:123];
-        imgView.hidden = YES;
     }
 
     //Set label for "Completed ##/##
