@@ -22,6 +22,7 @@
     pvc.tableDataSource = [[DataHelper sharedManager] programsList];
 
     //get rid of the historytabbar for now
+    
     NSMutableArray *tabBarVCs = [NSMutableArray arrayWithArray:tbc.viewControllers];
     [tabBarVCs removeObjectAtIndex:1];
     [tbc setViewControllers:tabBarVCs];
