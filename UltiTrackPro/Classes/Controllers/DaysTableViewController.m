@@ -483,7 +483,7 @@
     self.resetButton.width = 80.0;
     self.skipButton.title = @"Skip";
     self.skipButton.width = 80.0;
-    self.completeButton.title = @"Completed";
+    self.completeButton.title = @"Complete";
     self.completeButton.width = 80.0;
 }
 
@@ -492,7 +492,7 @@
 {
     NSString *resetButtonTitle = [NSString stringWithFormat:@"Reset(%d)", selectedRows.count];
     NSString *skipButtonTitle = [NSString stringWithFormat:@"Skip(%d)", selectedRows.count];
-    NSString *completedButtonTitle = [NSString stringWithFormat:@"Completed(%d)", selectedRows.count];
+    NSString *completedButtonTitle = [NSString stringWithFormat:@"Mark(%d)", selectedRows.count];
     self.resetButton.title = resetButtonTitle;
     self.skipButton.title = skipButtonTitle;
     self.completeButton.title = completedButtonTitle;

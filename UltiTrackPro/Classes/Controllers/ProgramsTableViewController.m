@@ -68,9 +68,9 @@
     [settingsDict addObserver:self forKeyPath:@"activeProgram" options:NSKeyValueObservingOptionNew context:NULL];
 
     //BG conf info
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background"]];
-    [self.tableView.backgroundView setContentMode:UIViewContentModeScaleAspectFill];
-    [self.tableView.backgroundView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
+//    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background"]];
+//    [self.tableView.backgroundView setContentMode:UIViewContentModeScaleAspectFill];
+//    [self.tableView.backgroundView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
 }
 
 
@@ -155,7 +155,7 @@
 
 - (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    cell.backgroundColor = (indexPath.row % 2 == 0) ? [UIColor colorWithRed:218.0f / 255.0f green:218.0f / 255.0f blue:218.0f / 255.0f alpha:.5] : [UIColor colorWithRed:201.0f / 255.0f green:201.0f / 255.0f blue:201.0f / 255.0f alpha:.5];
+    //cell.backgroundColor = (indexPath.row % 2 == 0) ? [UIColor colorWithRed:218.0f / 255.0f green:218.0f / 255.0f blue:218.0f / 255.0f alpha:.5] : [UIColor colorWithRed:201.0f / 255.0f green:201.0f / 255.0f blue:201.0f / 255.0f alpha:.5];
 }
 
 
