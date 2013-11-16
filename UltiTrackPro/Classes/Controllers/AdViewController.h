@@ -17,7 +17,6 @@
 @property (nonatomic, strong) NSString *completionMessage;
 @property (nonatomic, weak) IBOutlet UILabel *completionLabel;
 @property (nonatomic, strong) FXBlurView *blurView;
-
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (IBAction)viewAdButton:(UIButton *)sender;
