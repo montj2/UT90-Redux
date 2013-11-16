@@ -35,11 +35,18 @@
 
     //Set the completion label text described in ExerciseDetailViewController
     self.completionLabel.text = self.completionMessage;
-
-
+    
+    self.blurView = [[FXBlurView alloc] init];
+    self.blurView.frame = self.view.bounds;
+    self.blurView.blurEnabled = YES;
+    self.blurView.blurRadius = 6.0f;
+    [self.blurView addSubview:self.activityIndicator];
  
 }
 - (IBAction)viewAdButton:(UIButton *)sender {
+    
+    [self.view addSubview:self.blurView];
+    [self.activityIndicator startAnimating];
     
     GADRequest *request = [GADRequest request];
     request.testing = YES;
@@ -57,13 +64,24 @@
 // transition point in your application such as when transitioning between view
 // controllers.
 - (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
+    
+    [self.activityIndicator stopAnimating];
+    [self.blurView removeFromSuperview];
+    
     [self.fullPageAd presentFromRootViewController:self];
 }
 
 // Sent when an interstitial ad request completed without an interstitial to
 // show.  This is common since interstitials are shown sparingly to users.
 - (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error {
+    
+    [self.activityIndicator stopAnimating];
+    [self.blurView removeFromSuperview];
+    
     NSLog(@"%@", error);
+    //add alertview
+    
+    
 }
 
 - (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial {
