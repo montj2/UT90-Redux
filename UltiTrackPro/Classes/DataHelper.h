@@ -24,10 +24,11 @@
 - (NSArray *)exercisesForDay:(NSInteger)dayID;
 - (NSArray *)daysCompletedCountForProgram:(NSInteger)programID;
 - (NSArray *)bandsForSet:(NSInteger)setID;
-- (NSArray *)historyForExerciseID:(NSInteger)exerciseID;
+- (NSMutableArray *)historyForExerciseID:(NSInteger)exerciseID;
 - (void)markDayCompleteOrSkipped:(NSInteger)status forDay:(Day *)day;
 - (void)resetProgress;
 - (void)saveStat:(Stat *)stat;
+- (void)deleteHistoryItem:(Stat *)stat;
 - (Stat *)statForLastExercise:(Exercise *)exercise;
 
 @end

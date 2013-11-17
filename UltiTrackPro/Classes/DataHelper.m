@@ -13,6 +13,7 @@
 #import "Models/Stat.h"
 #import "BandSet.h"
 #import "Band.h"
+#import "FMDatabaseQueue.h"
 
 static DataHelper *sharedManager = nil;
 
@@ -128,7 +129,6 @@ static DataHelper *sharedManager = nil;
     NSMutableArray *return_values = [[NSMutableArray alloc] init];
     //Compose the query and execute
     [self.db open];
-    NSLog(@"You called exercisesForDay: with dayID %d", dayID);
     self.queryResults = [self.db executeQueryWithFormat:@"SELECT ExerciseOrderDetails.dayID, ExerciseOrderDetails.ExerciseOrder, ExerciseOrderDetails.ExerciseID, ExerciseOrderDetails.ExerciseCompleted, Exercises.ExerciseName, Exercises.ExerciseType FROM ExerciseOrderDetails JOIN Exercises ON Exercises.ExerciseID = ExerciseOrderDetails.ExerciseID WHERE ExerciseOrderDetails.DayID = (%d)", dayID];
 
     //Loop through the query and execute
@@ -239,7 +239,7 @@ static DataHelper *sharedManager = nil;
 }
 
 
-- (NSArray *) historyForExerciseID:(NSInteger)exerciseID
+- (NSMutableArray *) historyForExerciseID:(NSInteger)exerciseID
 {
     NSMutableArray *return_results = [[NSMutableArray alloc] initWithCapacity:100];
     [self.db open];
@@ -348,5 +348,11 @@ static DataHelper *sharedManager = nil;
     return return_results;
 }
 
+
+- (void)deleteHistoryItem:(Stat *)stat {
+    [self.db open];
+    [self.db executeUpdate:@"DELETE FROM UserStats WHERE _id = ?", [NSNumber numberWithInteger:stat.sID]];
+    [self.db close];
+}
 
 @end

@@ -110,16 +110,7 @@
     self.stopButton.hidden = YES;
     self.stopButton.alpha = 0.0;
 
-    //Bands Button image
-    //UIImage *bandsImage = [UIImage imageNamed:@"metal"];
-    //[self.bandsButton setBackgroundImage:bandsImage forState:UIControlStateNormal];
-    //[self.bandsButton setBackgroundImage:[UIImage imageNamed:@"metal_pressed"] forState:UIControlStateHighlighted];
 
-   // NSLog(@"%d",[self.navigationController.navigationBar tintAdjustmentMode]);
-   // [self.navigationController.navigationBar setBarTintColor:[UIColor darkGrayColor]];
-   // [self.navigationController.navigationBar setTranslucent:YES];
-   // [self.tabBarController.tabBar setBarTintColor:[UIColor darkGrayColor]];
-    //[self.navigationController.navigationBar setTintAdjustmentMode:UIViewTintAdjustmentModeDimmed];
     //Create the adView and ad setup
     _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
     _bannerView.adUnitID = @"ca-app-pub-2915168992422718/5093482585";

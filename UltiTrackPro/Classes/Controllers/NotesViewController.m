@@ -75,7 +75,6 @@
     if (sender.tag == 109)
     {
         [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-        NSLog(@"What?");
     }
     else
     {

@@ -10,8 +10,10 @@
 #import "Stat.h"
 #import "HistoryCell.h"
 #import <QuartzCore/QuartzCore.h>
-@interface HistoryTableViewController ()
+#import "DataHelper.h"
+#import "FMDatabaseQueue.h"
 
+@interface HistoryTableViewController ()
 @end
 
 @implementation HistoryTableViewController
@@ -175,6 +177,35 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //add code here for when you hit delete
+        [tableView beginUpdates];
+        
+        NSMutableArray *array = [NSMutableArray arrayWithArray:_dataSource];
+        
+        Stat *statToDelete = [array objectAtIndex:indexPath.row];
+        [array removeObjectAtIndex:indexPath.row];
+        
+        _dataSource = [NSMutableArray arrayWithArray:array];
+        
+        NSArray *indexPathsToRemove = [NSMutableArray arrayWithObject:indexPath];
+        
+        //Remove it from the database, but leave the main thread alone!
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+
+            [[DataHelper sharedManager] deleteHistoryItem:statToDelete];
+            
+            dispatch_async(dispatch_get_main_queue(), ^(void) {
+                
+                //Stop your activity indicator or anything else with the GUI
+                //Code here is run on the main thread
+                [tableView deleteRowsAtIndexPaths:indexPathsToRemove withRowAnimation:UITableViewRowAnimationRight];
+                [tableView endUpdates];
+            });
+        });
+    }
+}
 
 - (void) viewDidUnload
 {
