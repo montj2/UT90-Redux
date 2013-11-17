@@ -86,9 +86,6 @@
     self.notesTextView.delegate = self;
     self.notesTextView.returnKeyType = UIReturnKeyDone;
     self.notesTextView.textColor = [UIColor darkGrayColor];
-//    [self.notesTextView.layer setShadowOffset:CGSizeMake(50,50)];
-//    [self.notesTextView.layer setShadowColor:[[UIColor lightGrayColor] CGColor]];
-//    [self.notesTextView.layer setShadowOpacity:0.5];
 
     //Set the time UITextField properties
     self.timeNotesTextView.layer.borderWidth = 1.0f;
@@ -114,7 +111,6 @@
     //Create the adView and ad setup
     _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
     _bannerView.adUnitID = @"ca-app-pub-2915168992422718/5093482585";
-    
     _bannerView.rootViewController = self;
     _bannerView.delegate = self;
     [self refreshAd];
@@ -138,19 +134,23 @@
 
     [self.view bringSubviewToFront:(self.currentExercise.exerciseType == 2) ? self.timeView:self.slideView ];
 
-    //Buttons
-//    [self.startButton setBackgroundImage:[UIImage imageNamed:@"start"] forState:UIControlStateNormal];
-//    [self.startButton setBackgroundImage:[UIImage imageNamed:@"start_pressed"] forState:UIControlStateHighlighted];
-//    [self.stopButton setBackgroundImage:[UIImage imageNamed:@"stop"] forState:UIControlStateNormal];
-//    [self.stopButton setBackgroundImage:[UIImage imageNamed:@"stop_pressed"] forState:UIControlStateHighlighted];
-//    [self.resetButton setBackgroundImage:[UIImage imageNamed:@"reset"] forState:UIControlStateNormal];
-//    [self.resetButton setBackgroundImage:[UIImage imageNamed:@"reset_pressed"] forState:UIControlStateHighlighted];
 
     //UIDatePicker Configuration
     self.picker = [[UIDatePicker alloc] init];
     self.picker.datePickerMode = UIDatePickerModeDate;
     [self.picker setDate:[NSDate date]];
     self.dateTextField.inputView = self.picker;
+    
+    //Swipe Gestures
+    UISwipeGestureRecognizer* swipeRightGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRight)];
+    swipeRightGestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    
+    UISwipeGestureRecognizer* swipeLeftGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft)];
+    swipeLeftGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    
+    [self.view addGestureRecognizer:swipeLeftGestureRecognizer];
+    [self.view addGestureRecognizer:swipeRightGestureRecognizer];
+    
 }
 
 
@@ -200,7 +200,7 @@
     _bannerView = nil;
     [self setAdBannerView:nil];
     [self setTimeNotesTextView:nil];
-    //[self setBandsButton:nil];
+    [self setBandsButton:nil];
     [self setBandsArray:nil];
     [self setActionSheet:nil];
     [self setRepStepper:nil];
@@ -530,7 +530,6 @@
 }
 
 #pragma mark Band Selection
-//STart hrer
 - (void) updateTimer
 {
     NSDate *currentDate = [NSDate date];
@@ -916,5 +915,15 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark Swipe Gestures
+- (void)swipeRight {
+    if (self.previousButton.enabled) {
+        [self previousExerciseButton:nil];
+    }
+    
+}
 
+- (void)swipeLeft {
+    [self nextExerciseButton:nil];
+}
 @end
