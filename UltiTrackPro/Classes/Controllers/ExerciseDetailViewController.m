@@ -645,9 +645,10 @@
 
 
 #pragma mark AdMob
-- (void)                 adView:(GADBannerView *)bannerView
+- (void)adView:(GADBannerView *)bannerView
     didFailToReceiveAdWithError:(GADRequestError *)error
 {
+    NSLog(@"No AD, %@", error);
 }
 
 
