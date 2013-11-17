@@ -139,12 +139,12 @@
     [self.view bringSubviewToFront:(self.currentExercise.exerciseType == 2) ? self.timeView:self.slideView ];
 
     //Buttons
-    [self.startButton setBackgroundImage:[UIImage imageNamed:@"start"] forState:UIControlStateNormal];
-    [self.startButton setBackgroundImage:[UIImage imageNamed:@"start_pressed"] forState:UIControlStateHighlighted];
-    [self.stopButton setBackgroundImage:[UIImage imageNamed:@"stop"] forState:UIControlStateNormal];
-    [self.stopButton setBackgroundImage:[UIImage imageNamed:@"stop_pressed"] forState:UIControlStateHighlighted];
-    [self.resetButton setBackgroundImage:[UIImage imageNamed:@"reset"] forState:UIControlStateNormal];
-    [self.resetButton setBackgroundImage:[UIImage imageNamed:@"reset_pressed"] forState:UIControlStateHighlighted];
+//    [self.startButton setBackgroundImage:[UIImage imageNamed:@"start"] forState:UIControlStateNormal];
+//    [self.startButton setBackgroundImage:[UIImage imageNamed:@"start_pressed"] forState:UIControlStateHighlighted];
+//    [self.stopButton setBackgroundImage:[UIImage imageNamed:@"stop"] forState:UIControlStateNormal];
+//    [self.stopButton setBackgroundImage:[UIImage imageNamed:@"stop_pressed"] forState:UIControlStateHighlighted];
+//    [self.resetButton setBackgroundImage:[UIImage imageNamed:@"reset"] forState:UIControlStateNormal];
+//    [self.resetButton setBackgroundImage:[UIImage imageNamed:@"reset_pressed"] forState:UIControlStateHighlighted];
 
     //UIDatePicker Configuration
     self.picker = [[UIDatePicker alloc] init];
