@@ -117,7 +117,7 @@
 		1A40FF3C1838322B0062FB32 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = UltiTrack90/Images.xcassets; sourceTree = "<group>"; };
 		1A53C5E715DD9BCE007CB53B /* Stat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stat.h; sourceTree = "<group>"; };
 		1A53C5E815DD9BCE007CB53B /* Stat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stat.m; sourceTree = "<group>"; };
-		1A59ACC315B639A600A3B2E7 /* UltiTrack90.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltiTrack90.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A59ACC315B639A600A3B2E7 /* UltiTrack for P90X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UltiTrack for P90X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A59ACC715B639A600A3B2E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1A59ACC915B639A600A3B2E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1A59ACCB15B639A600A3B2E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -197,8 +197,8 @@
 		1AA6142115C3B5C800F0C43D /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = ../InfoPlist.strings; sourceTree = "<group>"; };
 		1AA6142215C3B5C800F0C43D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AA6142315C3B5C800F0C43D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		1AA6142415C3B5C800F0C43D /* UltiTrack90-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "UltiTrack90-Info.plist"; path = "../UltiTrack90-Info.plist"; sourceTree = "<group>"; };
-		1AA6142515C3B5C800F0C43D /* UltiTrack90-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UltiTrack90-Prefix.pch"; path = "../UltiTrack90-Prefix.pch"; sourceTree = "<group>"; };
+		1AA6142415C3B5C800F0C43D /* UltiTrack for P90X-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "UltiTrack for P90X-Info.plist"; path = "../UltiTrack for P90X-Info.plist"; sourceTree = "<group>"; };
+		1AA6142515C3B5C800F0C43D /* UltiTrack for P90X-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UltiTrack for P90X-Prefix.pch"; path = "../UltiTrack for P90X-Prefix.pch"; sourceTree = "<group>"; };
 		1AA8854F15D72D3200C6894A /* 19-circle-check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-circle-check.png"; sourceTree = "<group>"; };
 		1AA8855015D72D3200C6894A /* 19-circle-check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-circle-check@2x.png"; sourceTree = "<group>"; };
 		1AA8855115D72D3200C6894A /* 37-circle-x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37-circle-x.png"; sourceTree = "<group>"; };
@@ -305,7 +305,7 @@
 		1A59ACC415B639A600A3B2E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A59ACC315B639A600A3B2E7 /* UltiTrack90.app */,
+				1A59ACC315B639A600A3B2E7 /* UltiTrack for P90X.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -537,8 +537,8 @@
 				1AD352B615F3CAB000E4C29A /* UT90.sqlite */,
 				1AE652BA15EEF46700226C42 /* adMob */,
 				1AA6141B15C3B5C800F0C43D /* Images */,
-				1AA6142415C3B5C800F0C43D /* UltiTrack90-Info.plist */,
-				1AA6142515C3B5C800F0C43D /* UltiTrack90-Prefix.pch */,
+				1AA6142415C3B5C800F0C43D /* UltiTrack for P90X-Info.plist */,
+				1AA6142515C3B5C800F0C43D /* UltiTrack for P90X-Prefix.pch */,
 				1AA6142115C3B5C800F0C43D /* InfoPlist.strings */,
 				1AA6142215C3B5C800F0C43D /* main.m */,
 				1AA6142315C3B5C800F0C43D /* Settings.bundle */,
@@ -568,9 +568,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A59ACC215B639A600A3B2E7 /* UltiTrack90 */ = {
+		1A59ACC215B639A600A3B2E7 /* UltiTrack for P90X */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A59ACE115B639A600A3B2E7 /* Build configuration list for PBXNativeTarget "UltiTrack90" */;
+			buildConfigurationList = 1A59ACE115B639A600A3B2E7 /* Build configuration list for PBXNativeTarget "UltiTrack for P90X" */;
 			buildPhases = (
 				2F82AB6DC0DF4FDBAC8CAE9A /* Check Pods Manifest.lock */,
 				1A59ACBF15B639A600A3B2E7 /* Sources */,
@@ -582,9 +582,9 @@
 			);
 			dependencies = (
 			);
-			name = UltiTrack90;
+			name = "UltiTrack for P90X";
 			productName = UltiTrackPro;
-			productReference = 1A59ACC315B639A600A3B2E7 /* UltiTrack90.app */;
+			productReference = 1A59ACC315B639A600A3B2E7 /* UltiTrack for P90X.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -602,7 +602,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1A59ACBD15B639A600A3B2E7 /* Build configuration list for PBXProject "UltiTrack90" */;
+			buildConfigurationList = 1A59ACBD15B639A600A3B2E7 /* Build configuration list for PBXProject "UltiTrack for P90X" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -614,7 +614,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A59ACC215B639A600A3B2E7 /* UltiTrack90 */,
+				1A59ACC215B639A600A3B2E7 /* UltiTrack for P90X */,
 			);
 		};
 /* End PBXProject section */
@@ -829,8 +829,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UltiTrackPro/UltiTrack90-Prefix.pch";
-				INFOPLIST_FILE = "UltiTrackPro/UltiTrack90-Info.plist";
+				GCC_PREFIX_HEADER = "UltiTrackPro/UltiTrack for P90X-Prefix.pch";
+				INFOPLIST_FILE = "UltiTrackPro/UltiTrack for P90X-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -838,9 +838,9 @@
 					"/Users/james/Downloads/UT90-iOS-development/UltiTrackPro/Supporting\\ Files/Flurry",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = UltiTrack90;
+				PRODUCT_NAME = "UltiTrack for P90X";
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E3EA058A-C8AF-41F7-BDD9-B37D545D4F93";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EA4259FC-951A-449A-B2A4-6D9E7D8B666E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7s armv7";
@@ -858,8 +858,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UltiTrackPro/UltiTrack90-Prefix.pch";
-				INFOPLIST_FILE = "UltiTrackPro/UltiTrack90-Info.plist";
+				GCC_PREFIX_HEADER = "UltiTrackPro/UltiTrack for P90X-Prefix.pch";
+				INFOPLIST_FILE = "UltiTrackPro/UltiTrack for P90X-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -867,9 +867,9 @@
 					"/Users/james/Downloads/UT90-iOS-development/UltiTrackPro/Supporting\\ Files/Flurry",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = UltiTrack90;
-				PROVISIONING_PROFILE = "E3EA058A-C8AF-41F7-BDD9-B37D545D4F93";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E3EA058A-C8AF-41F7-BDD9-B37D545D4F93";
+				PRODUCT_NAME = "UltiTrack for P90X";
+				PROVISIONING_PROFILE = "EA4259FC-951A-449A-B2A4-6D9E7D8B666E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EA4259FC-951A-449A-B2A4-6D9E7D8B666E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7s armv7";
@@ -880,7 +880,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A59ACBD15B639A600A3B2E7 /* Build configuration list for PBXProject "UltiTrack90" */ = {
+		1A59ACBD15B639A600A3B2E7 /* Build configuration list for PBXProject "UltiTrack for P90X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A59ACDF15B639A600A3B2E7 /* Debug */,
@@ -889,7 +889,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A59ACE115B639A600A3B2E7 /* Build configuration list for PBXNativeTarget "UltiTrack90" */ = {
+		1A59ACE115B639A600A3B2E7 /* Build configuration list for PBXNativeTarget "UltiTrack for P90X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A59ACE215B639A600A3B2E7 /* Debug */,
