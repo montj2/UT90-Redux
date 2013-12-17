@@ -108,15 +108,7 @@
     self.stopButton.alpha = 0.0;
 
 
-    //Create the adView and ad setup
-    _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
-    _bannerView.adUnitID = @"ca-app-pub-2915168992422718/5093482585";
-    _bannerView.rootViewController = self;
-    _bannerView.delegate = self;
-    [self refreshAd];
-    [self.adBannerView addSubview:_bannerView];
-    _bannerView.hidden = YES;
-
+    
     //background image
     self.timeView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
     self.slideView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
@@ -150,6 +142,21 @@
     
     [self.view addGestureRecognizer:swipeLeftGestureRecognizer];
     [self.view addGestureRecognizer:swipeRightGestureRecognizer];
+    
+    //Create the adView and ad setup
+    _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+    _bannerView.adUnitID = @"ca-app-pub-2915168992422718/5093482585";
+    _bannerView.rootViewController = self;
+    _bannerView.delegate = self;
+    [_bannerView setFrame:CGRectMake(0,
+                                     self.view.frame.size.height - 206,
+                                     _bannerView.bounds.size.width,
+                                     _bannerView.bounds.size.height)];
+    [self refreshAd];
+    [self.view addSubview:_bannerView];
+    [self.view bringSubviewToFront:_bannerView];
+    _bannerView.hidden = YES;
+
     
 }
 
@@ -634,12 +641,12 @@
 #pragma mark GADBannerView Delegate
 - (void) adViewDidReceiveAd:(GADBannerView *)bannerView
 {
-    //Bring the ad to the front if it is not there
-    if ([[self.view subviews] lastObject] != self.adBannerView)
-    {
-        [self.view bringSubviewToFront:self.adBannerView];
-    }
-
+//    //Bring the ad to the front if it is not there
+//    if ([[self.view subviews] lastObject] != self.adBannerView)
+//    {
+//        [self.view bringSubviewToFront:self.adBannerView];
+//    }
+//
     _bannerView.hidden = NO;
 }
 

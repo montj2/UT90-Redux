@@ -103,6 +103,12 @@
 		1AE17A15160AC0FD0032B363 /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE17A14160AC0FD0032B363 /* HistoryCell.m */; };
 		1AE652CA15EEF55900226C42 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE652C915EEF55900226C42 /* SystemConfiguration.framework */; };
 		1AE82D751829B54000065171 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1AE82D731829B54000065171 /* README.txt */; };
+		1AED6FE1185FF97600CA0D69 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AED6FE0185FF97600CA0D69 /* CFNetwork.framework */; };
+		1AED6FE3185FF9A200CA0D69 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AED6FE2185FF9A200CA0D69 /* MediaPlayer.framework */; };
+		1AED6FE5185FF9BD00CA0D69 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AED6FE4185FF9BD00CA0D69 /* MobileCoreServices.framework */; };
+		1AED6FE7185FF9E400CA0D69 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AED6FE6185FF9E400CA0D69 /* PassKit.framework */; };
+		1AED6FE9185FF9ED00CA0D69 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AED6FE8185FF9ED00CA0D69 /* Security.framework */; };
+		1AED6FEB185FF9FD00CA0D69 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AED6FEA185FF9FD00CA0D69 /* Social.framework */; };
 		5705E3F814E144D19A572927 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02676A9AEBDC4CCC93E0A579 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -263,6 +269,12 @@
 		1AE82D711829B54000065171 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
 		1AE82D721829B54000065171 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		1AE82D731829B54000065171 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		1AED6FE0185FF97600CA0D69 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1AED6FE2185FF9A200CA0D69 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		1AED6FE4185FF9BD00CA0D69 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1AED6FE6185FF9E400CA0D69 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		1AED6FE8185FF9ED00CA0D69 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1AED6FEA185FF9FD00CA0D69 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		934B4363A36445DD8FC334D6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,20 +284,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A68A2501829BA2A0052F1D0 /* StoreKit.framework in Frameworks */,
+				1AED6FEB185FF9FD00CA0D69 /* Social.framework in Frameworks */,
+				1AED6FE9185FF9ED00CA0D69 /* Security.framework in Frameworks */,
+				1AED6FE7185FF9E400CA0D69 /* PassKit.framework in Frameworks */,
+				1AAE31C2161E4B5100E3C18B /* AdSupport.framework in Frameworks */,
 				1A68A24E1829BA010052F1D0 /* AudioToolbox.framework in Frameworks */,
-				1A929B5C185FF80F00F527CF /* libMMSDK_5.1.1.a in Frameworks */,
 				1A68A24D1829B9BB0052F1D0 /* AVFoundation.framework in Frameworks */,
+				1AED6FE1185FF97600CA0D69 /* CFNetwork.framework in Frameworks */,
+				1A59ACCC15B639A600A3B2E7 /* CoreGraphics.framework in Frameworks */,
+				1A59ACCA15B639A600A3B2E7 /* Foundation.framework in Frameworks */,
+				1AED6FE3185FF9A200CA0D69 /* MediaPlayer.framework in Frameworks */,
+				1AED6FE5185FF9BD00CA0D69 /* MobileCoreServices.framework in Frameworks */,
+				1A2AFFF715D5B8F000BDEB93 /* QuartzCore.framework in Frameworks */,
+				1A929B5C185FF80F00F527CF /* libMMSDK_5.1.1.a in Frameworks */,
 				1A68A24B1829B9800052F1D0 /* libFlurry.a in Frameworks */,
 				1A68A24A1829B9690052F1D0 /* libGoogleAdMobAds.a in Frameworks */,
-				1AAE31C2161E4B5100E3C18B /* AdSupport.framework in Frameworks */,
 				1AE652CA15EEF55900226C42 /* SystemConfiguration.framework in Frameworks */,
 				1A13537F15C37C6E00D8FC78 /* MessageUI.framework in Frameworks */,
-				1A2AFFF715D5B8F000BDEB93 /* QuartzCore.framework in Frameworks */,
 				1A1FE4C115B6D5430095F71D /* libsqlite3.dylib in Frameworks */,
 				1A59ACC815B639A600A3B2E7 /* UIKit.framework in Frameworks */,
-				1A59ACCA15B639A600A3B2E7 /* Foundation.framework in Frameworks */,
 				1A929B61185FF84900F527CF /* libAdapterMillennial.a in Frameworks */,
-				1A59ACCC15B639A600A3B2E7 /* CoreGraphics.framework in Frameworks */,
 				5705E3F814E144D19A572927 /* libPods.a in Frameworks */,
 				1A929B5E185FF82900F527CF /* SpeechKit.framework in Frameworks */,
 			);
@@ -327,6 +345,12 @@
 		1A59ACC615B639A600A3B2E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AED6FEA185FF9FD00CA0D69 /* Social.framework */,
+				1AED6FE8185FF9ED00CA0D69 /* Security.framework */,
+				1AED6FE6185FF9E400CA0D69 /* PassKit.framework */,
+				1AED6FE4185FF9BD00CA0D69 /* MobileCoreServices.framework */,
+				1AED6FE2185FF9A200CA0D69 /* MediaPlayer.framework */,
+				1AED6FE0185FF97600CA0D69 /* CFNetwork.framework */,
 				1A929B5D185FF82900F527CF /* SpeechKit.framework */,
 				1A68A24F1829BA2A0052F1D0 /* StoreKit.framework */,
 				1A68A24C1829B9BB0052F1D0 /* AVFoundation.framework */,
