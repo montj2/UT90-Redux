@@ -25,6 +25,9 @@
 		1A68A2501829BA2A0052F1D0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A68A24F1829BA2A0052F1D0 /* StoreKit.framework */; };
 		1A68A2531829C2160052F1D0 /* AdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A68A2521829C2160052F1D0 /* AdViewController.m */; };
 		1A7A60FD1618A3DB00DD7A17 /* NotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A60FC1618A3DB00DD7A17 /* NotesViewController.m */; };
+		1A929B5C185FF80F00F527CF /* libMMSDK_5.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A929B57185FF80F00F527CF /* libMMSDK_5.1.1.a */; };
+		1A929B5E185FF82900F527CF /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A929B5D185FF82900F527CF /* SpeechKit.framework */; };
+		1A929B61185FF84900F527CF /* libAdapterMillennial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A929B60185FF84900F527CF /* libAdapterMillennial.a */; };
 		1AA6142715C3B5C800F0C43D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA613D215C3B5C800F0C43D /* FMDatabase.m */; };
 		1AA6142815C3B5C800F0C43D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA613D415C3B5C800F0C43D /* FMDatabaseAdditions.m */; };
 		1AA6142915C3B5C800F0C43D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA613D615C3B5C800F0C43D /* FMDatabasePool.m */; };
@@ -128,6 +131,14 @@
 		1A68A2521829C2160052F1D0 /* AdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewController.m; sourceTree = "<group>"; };
 		1A7A60FB1618A3DB00DD7A17 /* NotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesViewController.h; sourceTree = "<group>"; };
 		1A7A60FC1618A3DB00DD7A17 /* NotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesViewController.m; sourceTree = "<group>"; };
+		1A929B57185FF80F00F527CF /* libMMSDK_5.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMMSDK_5.1.1.a; sourceTree = "<group>"; };
+		1A929B58185FF80F00F527CF /* MMAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMAdView.h; sourceTree = "<group>"; };
+		1A929B59185FF80F00F527CF /* MMInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMInterstitial.h; sourceTree = "<group>"; };
+		1A929B5A185FF80F00F527CF /* MMRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMRequest.h; sourceTree = "<group>"; };
+		1A929B5B185FF80F00F527CF /* MMSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSDK.h; sourceTree = "<group>"; };
+		1A929B5D185FF82900F527CF /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpeechKit.framework; sourceTree = "<group>"; };
+		1A929B5F185FF84900F527CF /* GADMillennialExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMillennialExtras.h; sourceTree = "<group>"; };
+		1A929B60185FF84900F527CF /* libAdapterMillennial.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterMillennial.a; sourceTree = "<group>"; };
 		1AA613D115C3B5C800F0C43D /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		1AA613D215C3B5C800F0C43D /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		1AA613D315C3B5C800F0C43D /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -262,6 +273,7 @@
 			files = (
 				1A68A2501829BA2A0052F1D0 /* StoreKit.framework in Frameworks */,
 				1A68A24E1829BA010052F1D0 /* AudioToolbox.framework in Frameworks */,
+				1A929B5C185FF80F00F527CF /* libMMSDK_5.1.1.a in Frameworks */,
 				1A68A24D1829B9BB0052F1D0 /* AVFoundation.framework in Frameworks */,
 				1A68A24B1829B9800052F1D0 /* libFlurry.a in Frameworks */,
 				1A68A24A1829B9690052F1D0 /* libGoogleAdMobAds.a in Frameworks */,
@@ -272,8 +284,10 @@
 				1A1FE4C115B6D5430095F71D /* libsqlite3.dylib in Frameworks */,
 				1A59ACC815B639A600A3B2E7 /* UIKit.framework in Frameworks */,
 				1A59ACCA15B639A600A3B2E7 /* Foundation.framework in Frameworks */,
+				1A929B61185FF84900F527CF /* libAdapterMillennial.a in Frameworks */,
 				1A59ACCC15B639A600A3B2E7 /* CoreGraphics.framework in Frameworks */,
 				5705E3F814E144D19A572927 /* libPods.a in Frameworks */,
+				1A929B5E185FF82900F527CF /* SpeechKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +327,7 @@
 		1A59ACC615B639A600A3B2E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A929B5D185FF82900F527CF /* SpeechKit.framework */,
 				1A68A24F1829BA2A0052F1D0 /* StoreKit.framework */,
 				1A68A24C1829B9BB0052F1D0 /* AVFoundation.framework */,
 				1AAE31C1161E4B5100E3C18B /* AdSupport.framework */,
@@ -328,6 +343,20 @@
 				02676A9AEBDC4CCC93E0A579 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A929B56185FF80F00F527CF /* MMSDK */ = {
+			isa = PBXGroup;
+			children = (
+				1A929B5F185FF84900F527CF /* GADMillennialExtras.h */,
+				1A929B60185FF84900F527CF /* libAdapterMillennial.a */,
+				1A929B57185FF80F00F527CF /* libMMSDK_5.1.1.a */,
+				1A929B58185FF80F00F527CF /* MMAdView.h */,
+				1A929B59185FF80F00F527CF /* MMInterstitial.h */,
+				1A929B5A185FF80F00F527CF /* MMRequest.h */,
+				1A929B5B185FF80F00F527CF /* MMSDK.h */,
+			);
+			path = MMSDK;
 			sourceTree = "<group>";
 		};
 		1AA613CF15C3B5C800F0C43D /* UltiTrackPro */ = {
@@ -533,6 +562,7 @@
 		1AA6142015C3B5C800F0C43D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1A929B56185FF80F00F527CF /* MMSDK */,
 				1A3997E31629ADDD00C8A8C7 /* Flurry */,
 				1AD352B615F3CAB000E4C29A /* UT90.sqlite */,
 				1AE652BA15EEF46700226C42 /* adMob */,
@@ -828,6 +858,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/james/Downloads/UT90-iOS-development",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UltiTrackPro/UltiTrack for P90X-Prefix.pch";
 				INFOPLIST_FILE = "UltiTrackPro/UltiTrack for P90X-Info.plist";
@@ -836,6 +870,7 @@
 					"$(inherited)",
 					"/Users/james/Downloads/UT90-iOS-development/UltiTrackPro/Supporting\\ Files/adMob",
 					"/Users/james/Downloads/UT90-iOS-development/UltiTrackPro/Supporting\\ Files/Flurry",
+					"/Users/james/Downloads/UT90-iOS-development/UltiTrackPro/Supporting\\ Files/MMSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "UltiTrack for P90X";
@@ -857,6 +892,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/james/Downloads/UT90-iOS-development",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UltiTrackPro/UltiTrack for P90X-Prefix.pch";
 				INFOPLIST_FILE = "UltiTrackPro/UltiTrack for P90X-Info.plist";
@@ -865,6 +904,7 @@
 					"$(inherited)",
 					"/Users/james/Downloads/UT90-iOS-development/UltiTrackPro/Supporting\\ Files/adMob",
 					"/Users/james/Downloads/UT90-iOS-development/UltiTrackPro/Supporting\\ Files/Flurry",
+					"/Users/james/Downloads/UT90-iOS-development/UltiTrackPro/Supporting\\ Files/MMSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "UltiTrack for P90X";
