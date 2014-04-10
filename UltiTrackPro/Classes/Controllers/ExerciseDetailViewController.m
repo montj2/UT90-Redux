@@ -143,21 +143,6 @@
     [self.view addGestureRecognizer:swipeLeftGestureRecognizer];
     [self.view addGestureRecognizer:swipeRightGestureRecognizer];
     
-    //Create the adView and ad setup
-    _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
-    _bannerView.adUnitID = @"ca-app-pub-2915168992422718/5093482585";
-    _bannerView.rootViewController = self;
-    _bannerView.delegate = self;
-    [_bannerView setFrame:CGRectMake(0,
-                                     self.view.frame.size.height - 206,
-                                     _bannerView.bounds.size.width,
-                                     _bannerView.bounds.size.height)];
-    [self refreshAd];
-    [self.view addSubview:_bannerView];
-    [self.view bringSubviewToFront:_bannerView];
-    _bannerView.hidden = YES;
-
-    
 }
 
 
@@ -627,8 +612,8 @@
     [[DataHelper sharedManager] markDayCompleteOrSkipped:0 forDay:self.day];
     DaysTableViewController *controller = [[self.navigationController viewControllers] objectAtIndex:1];
     controller.tableDataSource = [[DataHelper sharedManager] daysForProgram:self.programID];
+
     //testing fullpage ad
-    //[self.navigationController popViewControllerAnimated:YES];
     AdViewController * adView = [self.storyboard instantiateViewControllerWithIdentifier:@"fullPageAd"];
     adView.completionMessage = [NSString stringWithFormat:@"Day %d: %@ Completed!", self.day.dayNumber, self.day.dayName];
     
@@ -636,28 +621,6 @@
     
     
 }
-
-
-#pragma mark GADBannerView Delegate
-- (void) adViewDidReceiveAd:(GADBannerView *)bannerView
-{
-//    //Bring the ad to the front if it is not there
-//    if ([[self.view subviews] lastObject] != self.adBannerView)
-//    {
-//        [self.view bringSubviewToFront:self.adBannerView];
-//    }
-//
-    _bannerView.hidden = NO;
-}
-
-
-#pragma mark AdMob
-- (void)adView:(GADBannerView *)bannerView
-    didFailToReceiveAdWithError:(GADRequestError *)error
-{
-    NSLog(@"No AD, %@", error);
-}
-
 
 - (IBAction) historyButton:(id)sender
 {
