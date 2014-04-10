@@ -1,13 +1,10 @@
 PODS:
-  - FlatUIKit (1.2)
-  - FXBlurView (1.4.4)
+  - FXBlurView (1.6)
 
 DEPENDENCIES:
-  - FlatUIKit (~> 1.2)
-  - FXBlurView (~> 1.4.4)
+  - FXBlurView (~> 1.6)
 
 SPEC CHECKSUMS:
-  FlatUIKit: 43b2acaa6f4ef57539b51b00e4ce62d506e33e11
-  FXBlurView: bd4c9209f4415ec41138acabaa18cd0f87ecd49e
+  FXBlurView: 06f9f602d529c8e2d87648293d73a618621d3d81
 
-COCOAPODS: 0.28.0
+COCOAPODS: 0.31.1

@@ -1,4 +1,3 @@
-platform :ios, "7.0"
+platform :ios, "7.1"
 
-pod 'FlatUIKit', '~> 1.2'
-pod 'FXBlurView', '~> 1.4.4'
+pod 'FXBlurView', '~> 1.6'

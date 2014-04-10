@@ -10,7 +10,6 @@
 #import "DataHelper.h"
 #import "Program.h"
 #import "DaysTableViewController.h"
-#import <FlatUIKit/UIColor+FlatUI.h>
 
 @interface ProgramsTableViewController () {
     //Program *program;
